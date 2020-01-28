@@ -1,20 +1,11 @@
 package banking.capgemini.system;
 
 public class SC extends BankingModel {
-	@Override
-	public void addAmount() {
-		super.addAmount();
-		
+	
+	public void addSC() {
 		System.out.println("Enter the amount to be added");
 		double addedAmount = scan.nextDouble();
-		if(getAddCounter()>=3) {
-			setAccountBalance(getAccountBalance()+getAccountBalance()*0.038+ addedAmount);
-		}else {
-			setAccountBalance(getAccountBalance()+addedAmount);
-			
-		}
-		setAddCounter(getAddCounter()+1);
-		System.out.println("Your SC Account Balance is "+getAccountBalance());
+		addAmount(addedAmount,0.038);	
 	}
 	
 	@Override

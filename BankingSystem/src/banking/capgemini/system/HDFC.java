@@ -1,20 +1,12 @@
 package banking.capgemini.system;
 
 public class HDFC extends BankingModel {
-	@Override
-	public void addAmount() {
-		super.addAmount();
-		
+	
+	public void addHDFC() {
 		System.out.println("Enter the amount to be added");
 		double addedAmount = scan.nextDouble();
-		if(getAddCounter()>=3) {
-			setAccountBalance(getAccountBalance()+getAccountBalance()*0.0275+ addedAmount);
-		}else {
-			setAccountBalance(getAccountBalance()+addedAmount);
-			
-		}
-		setAddCounter(getAddCounter()+1);
-		System.out.println("Your HDFC Account Balance is "+getAccountBalance());
+		addAmount(addedAmount,0.0275);
+		
 	}
 	
 	@Override

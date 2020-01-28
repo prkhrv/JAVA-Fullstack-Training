@@ -30,8 +30,16 @@ public class BankingModel extends BankingSystem {
 	public void setWithdrawCounter(int withdrawCounter) {
 		this.withdrawCounter = withdrawCounter;
 	}
-	public void addAmount() {
+	public void addAmount(double addedAmount,double d) {
 		// TODO Auto-generated method stub
+		if(getAddCounter()>=3) {
+			setAccountBalance(getAccountBalance()+getAccountBalance()*d+ addedAmount);
+		}else {
+			setAccountBalance(getAccountBalance()+addedAmount);
+			
+		}
+		setAddCounter(getAddCounter()+1);
+		System.out.println("Your Account Balance is "+getAccountBalance());
 		
 	}
 	public void withdrawAmount() {

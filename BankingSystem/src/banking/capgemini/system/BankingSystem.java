@@ -20,24 +20,26 @@ public class BankingSystem {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BankingModel mobjectBankingModel = new BankingModel();
-		ICICI mObjectIcici = new ICICI();
 		HDFC mObjectHdfc = new HDFC();
+		ICICI mObjectIcici = new ICICI();
 		Axis mObjectAxis = new Axis();
 		SC mObjectSC = new SC();
 		
 		do {
 			int selectedBank = mobjectBankingModel.selectBankMenu();
 			if(selectedBank == 1) {
+				
 				selectedOption = mobjectBankingModel.bankingOptions();
 				if(selectedOption==1) {
-					mObjectIcici.addAmount();
+					mObjectIcici.addICICI();
 				}else if (selectedOption==2){
 					mObjectIcici.withdrawAmount();
 				}
 			}else if(selectedBank == 2){
+				
 				selectedOption = mobjectBankingModel.bankingOptions();
 				if(selectedOption==1) {
-					mObjectHdfc.addAmount();
+					mObjectHdfc.addHDFC();
 				}else if(selectedOption == 2){
 					mObjectHdfc.withdrawAmount();
 					
@@ -45,7 +47,7 @@ public class BankingSystem {
 			}else if(selectedBank == 3) {
 				selectedOption = mobjectBankingModel.bankingOptions();
 				if(selectedOption==1) {
-					mObjectAxis.addAmount();
+					mObjectAxis.addAxis();
 				}else if(selectedOption == 2){
 					mObjectAxis.withdrawAmount();
 					
@@ -53,7 +55,7 @@ public class BankingSystem {
 			}else if (selectedBank == 4) {
 				selectedOption = mobjectBankingModel.bankingOptions();
 				if(selectedOption==1) {
-					mObjectSC.addAmount();
+					mObjectSC.addSC();
 				}else if(selectedOption == 2){
 					mObjectSC.withdrawAmount();
 					

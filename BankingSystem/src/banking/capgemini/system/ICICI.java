@@ -1,21 +1,14 @@
 package banking.capgemini.system;
 
 public class ICICI extends BankingModel {
-	@Override
-	public void addAmount() {
-		super.addAmount();
-		
+	
+	
+	public void addICICI() {
 		System.out.println("Enter the amount to be added");
 		double addedAmount = scan.nextDouble();
-		if(getAddCounter()>=3) {
-			setAccountBalance(getAccountBalance()+getAccountBalance()*0.023+ addedAmount);
-		}else {
-			setAccountBalance(getAccountBalance()+addedAmount);
-			
-		}
-		setAddCounter(getAddCounter()+1);
-		System.out.println("Your ICICI Account Balance is "+getAccountBalance());
+		addAmount(addedAmount,0.023);	
 	}
+		
 	
 	@Override
 	public void withdrawAmount() {
