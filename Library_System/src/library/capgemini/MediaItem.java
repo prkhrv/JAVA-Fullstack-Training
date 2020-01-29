@@ -1,5 +1,7 @@
 package library.capgemini;
 
-public class MediaItem extends Item {
+public abstract class MediaItem extends Item {
+	
+	public abstract void showMediaItem();
 
 }

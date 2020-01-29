@@ -1,18 +1,8 @@
 package library.capgemini;
 
-import java.util.Scanner;
-
-public class Item {
-	
-	Scanner scan = new Scanner(System.in);
-	
-	public Item() {
-		System.out.println("Welcome to Library Management System");
-		
-		
-	}
-	
+public abstract class Item {
 	int _id,noOfCopies;
+	String title;
 	
 	
 	public int get_id() {
@@ -33,6 +23,8 @@ public class Item {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	String title = new String();
+	
+	
+	public abstract void show();
 
 }
