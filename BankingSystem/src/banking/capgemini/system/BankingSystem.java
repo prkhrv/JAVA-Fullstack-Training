@@ -33,7 +33,7 @@ public class BankingSystem {
 				if(selectedOption==1) {
 					mObjectIcici.addICICI();
 				}else if (selectedOption==2){
-					mObjectIcici.withdrawAmount();
+					mObjectIcici.withdrawICICI();
 				}
 			}else if(selectedBank == 2){
 				
@@ -41,7 +41,7 @@ public class BankingSystem {
 				if(selectedOption==1) {
 					mObjectHdfc.addHDFC();
 				}else if(selectedOption == 2){
-					mObjectHdfc.withdrawAmount();
+					mObjectHdfc.withdrawHDFC();
 					
 				}
 			}else if(selectedBank == 3) {
@@ -49,7 +49,7 @@ public class BankingSystem {
 				if(selectedOption==1) {
 					mObjectAxis.addAxis();
 				}else if(selectedOption == 2){
-					mObjectAxis.withdrawAmount();
+					mObjectAxis.withdrawAxis();
 					
 				}
 			}else if (selectedBank == 4) {
@@ -57,7 +57,7 @@ public class BankingSystem {
 				if(selectedOption==1) {
 					mObjectSC.addSC();
 				}else if(selectedOption == 2){
-					mObjectSC.withdrawAmount();
+					mObjectSC.withdrawSC();
 					
 				}
 				

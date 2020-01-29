@@ -42,8 +42,23 @@ public class BankingModel extends BankingSystem {
 		System.out.println("Your Account Balance is "+getAccountBalance());
 		
 	}
-	public void withdrawAmount() {
+	public void withdrawAmount(double withdrawnAmount,double interest,double minBalance) {
 		// TODO Auto-generated method stub
+		
+		setMinBalance(minBalance);
+		setWithdrawCounter(getWithdrawCounter()+1);
+		if(getAccountBalance() - withdrawnAmount >= getMinBalance()){
+			if(getWithdrawCounter()>3) {
+				setAccountBalance(getAccountBalance()-getAccountBalance()*interest - withdrawnAmount);
+			}else {
+				setAccountBalance(getAccountBalance()-withdrawnAmount);
+			}
+			
+		}else {
+			System.out.println(" Minimum Limit Reached");
+		}
+		
+		System.out.println("Your Account Balance is "+getAccountBalance());
 		
 	}
 	

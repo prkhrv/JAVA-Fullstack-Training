@@ -9,26 +9,12 @@ public class ICICI extends BankingModel {
 		addAmount(addedAmount,0.023);	
 	}
 		
-	
-	@Override
-	public void withdrawAmount() {
-		super.withdrawAmount();
-		setMinBalance(3000);
-		setWithdrawCounter(getWithdrawCounter()+1);
+	public void withdrawICICI() {
+		
 		System.out.println("Enter the amount to be withdrawn");
 		double withdrawnAmount = scan.nextDouble();
-		if(getAccountBalance() - withdrawnAmount >= getMinBalance()){
-			if(getWithdrawCounter()>3) {
-				setAccountBalance(getAccountBalance()-getAccountBalance()*0.015 - withdrawnAmount);
-			}else {
-				setAccountBalance(getAccountBalance()-withdrawnAmount);
-			}
-			
-		}else {
-			System.out.println(" Minimum Limit Reached");
-		}
+		withdrawAmount(withdrawnAmount, 0.015, 3000);
 		
-		System.out.println("Your ICICI Account Balance is "+getAccountBalance());
 		
 		
 	}

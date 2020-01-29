@@ -9,25 +9,10 @@ public class HDFC extends BankingModel {
 		
 	}
 	
-	@Override
-	public void withdrawAmount() {
-		super.withdrawAmount();
-		setMinBalance(2000);
-		setWithdrawCounter(getWithdrawCounter()+1);
+	public void withdrawHDFC() {
 		System.out.println("Enter the amount to be withdrawn");
 		double withdrawnAmount = scan.nextDouble();
-		if(getAccountBalance() - withdrawnAmount >= getMinBalance()){
-			if(getWithdrawCounter()>3) {
-				setAccountBalance(getAccountBalance()-getAccountBalance()*0.02 - withdrawnAmount);
-			}else {
-				setAccountBalance(getAccountBalance()-withdrawnAmount);
-			}
-			
-		}else {
-			System.out.println(" Minimum Limit Reached");
-		}
-		
-		System.out.println("Your HDFC Account Balance is "+getAccountBalance());
+		withdrawAmount(withdrawnAmount, 0.02, 2000);
 		
 		
 	}
