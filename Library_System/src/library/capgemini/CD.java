@@ -11,7 +11,7 @@ public class CD extends MediaItem {
 	}
 
 	@Override
-	public void showMediaItem() {
+	public void addMediaItem() {
 		// TODO Auto-generated method stub
 		
 	}

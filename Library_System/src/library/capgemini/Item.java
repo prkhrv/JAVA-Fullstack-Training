@@ -1,6 +1,6 @@
 package library.capgemini;
 
-public abstract class Item {
+public abstract class Item extends LibraryManagement {
 	int _id,noOfCopies;
 	String title;
 	
