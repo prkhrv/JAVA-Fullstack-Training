@@ -9,7 +9,7 @@ public class stringProblem {
 
     public static void main(String[] args) {
         stringProblem mObject = new stringProblem();
-        mObject.showResult(mObject.sortString(mObject.str));
+        System.out.println(Arrays.toString(mObject.sortString(mObject.str)));
 
         
     }
@@ -30,9 +30,9 @@ public class stringProblem {
         
     }
 
-    public void showResult(String[] arr) {
-		for(String a:arr){
-            System.out.println(a);
-        }
-    }
+    // public void showResult(String[] arr) {
+	// 	for(String a:arr){
+    //         System.out.println(a);
+    //     }
+    // }
 }
