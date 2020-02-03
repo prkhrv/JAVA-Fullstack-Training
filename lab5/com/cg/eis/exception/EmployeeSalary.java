@@ -1,6 +1,7 @@
 package com.cg.eis.exception;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
@@ -14,7 +15,16 @@ public class EmployeeSalary {
 
     public static void main(String[] args) {
         EmployeeSalary mObject = new EmployeeSalary();
-        mObject.salary = 1000;
+        // TEST
+        // mObject.salary = 1000;
+        System.out.println("Enter the salary");
+        try {
+            mObject.salary = Integer.parseInt(mObject.br.readLine());
+        } catch (NumberFormatException e1) {
+            e1.printStackTrace();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
         try {
             mObject.salaryCheck(mObject.salary);
         } catch (EmployeeException e) {
