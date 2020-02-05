@@ -31,11 +31,14 @@ public class Lab_Six_Exercise10 {
     public Boolean validateJobSeeker(String name) {
         String[] check = name.split("_");
 
-        
-        if(check[0].length() >= 8 && check[1].equals("job")){
+
+        if(check.length == 2){
+            if(check[0].length() >= 8 && check[1].equals("job")){
             return true;
         }
-        return false;
+    }
+        
+    return false;
         
     }
 }
